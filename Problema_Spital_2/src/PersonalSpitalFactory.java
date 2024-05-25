@@ -1,6 +1,6 @@
 public class PersonalSpitalFactory {
-    public static PersonalSpital createPersonal(String nume, TipPersonal tipPersonal) {
-        switch (tipPersonal) {
+    public static PersonalSpital createPersonal(String nume, ETipPersonal ETipPersonal) {
+        switch (ETipPersonal) {
             case Brancardier:
                 return new Brancardier(nume);
             case Asistent:
@@ -8,7 +8,7 @@ public class PersonalSpitalFactory {
             case Medic:
                 return new Medic(nume);
             default:
-                throw new RuntimeException("Tipul personalului: "  + tipPersonal + "nu este valid:");
+                throw new RuntimeException("Tipul personalului: "  + ETipPersonal + "nu este valid:");
         }
     }
 }

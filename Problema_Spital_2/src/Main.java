@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        PersonalSpital brancardier = PersonalSpitalFactory.createPersonal("Sandu Andrei", TipPersonal.Brancardier);
-        PersonalSpital asistent = PersonalSpitalFactory.createPersonal("Ionescu Cristina", TipPersonal.Asistent);
-        PersonalSpital medic = PersonalSpitalFactory.createPersonal("Popescu Bogdan", TipPersonal.Medic);
+        PersonalSpital brancardier = PersonalSpitalFactory.createPersonal("Sandu Andrei", ETipPersonal.Brancardier);
+        PersonalSpital asistent = PersonalSpitalFactory.createPersonal("Ionescu Cristina", ETipPersonal.Asistent);
+        PersonalSpital medic = PersonalSpitalFactory.createPersonal("Popescu Bogdan", ETipPersonal.Medic);
 
         System.out.println(brancardier);
         System.out.println(asistent);

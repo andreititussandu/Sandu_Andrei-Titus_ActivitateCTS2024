@@ -1,15 +1,15 @@
 public abstract class PersonalSpital {
     private String nume;
-    private TipPersonal tipPersonal;
+    private ETipPersonal ETipPersonal;
 
-    public PersonalSpital(String nume, TipPersonal tipPersonal) {
+    public PersonalSpital(String nume, ETipPersonal ETipPersonal) {
         this.nume = nume;
-        this.tipPersonal = tipPersonal;
+        this.ETipPersonal = ETipPersonal;
     }
 
     @Override
     public String toString() {
         return String.format("Nume: %s\n" +
-                "Tip personal: %s", nume, tipPersonal);
+                "Tip personal: %s", nume, ETipPersonal);
     }
 }

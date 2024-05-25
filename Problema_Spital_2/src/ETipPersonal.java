@@ -1,4 +1,4 @@
-public enum TipPersonal {
+public enum ETipPersonal {
     Brancardier,
     Asistent,
     Medic
