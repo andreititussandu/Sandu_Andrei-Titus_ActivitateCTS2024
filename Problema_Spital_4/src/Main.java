@@ -1,3 +1,6 @@
+import Prototype.Reteta;
+import Prototype.Solutie;
+
 import java.util.List;
 
 public class Main {
