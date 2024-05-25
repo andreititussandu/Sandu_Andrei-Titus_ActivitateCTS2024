@@ -1,15 +1,17 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import ChainOfResponsibility.*;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        AsezareLaCoada asezareLaCoada = new AsezareLaCoada();
+        PrezentareBilet prezentareBilet = new PrezentareBilet();
+        ControlCorporal controlCorporal = new ControlCorporal();
+        IntrareInStadion intrareInStadion = new IntrareInStadion();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        asezareLaCoada.setNextHandler(prezentareBilet);
+        prezentareBilet.setNextHandler(controlCorporal);
+        controlCorporal.setNextHandler(intrareInStadion);
+
+        Spectator spectator = new Spectator("Andrei Sandu", "A05");
+        asezareLaCoada.executaPas(spectator);
     }
 }
